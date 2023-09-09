@@ -1,3 +1,4 @@
+import { Footer } from "antd/es/layout/layout"
 import Header from "../../layout/Header"
 
 const Home = () => {
@@ -5,7 +6,8 @@ const Home = () => {
     return(
         <>
         <Header/>
-        Home
+        <div>home</div>
+        <Footer/>
         </>
     )
    
