@@ -1,4 +1,3 @@
-
 import { Drawer, Space } from "antd";
 import logo from "../../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
@@ -34,6 +33,7 @@ const Header = () => {
 
       <div className="text-textColor hidden max-[700px]:block ">
         <ButtonComponent
+          className="border-none"
           icon={<MenuOutlined className="text-textColor hover:text-primary" />}
           onClick={() => {
             setOpen(true);
