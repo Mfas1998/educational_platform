@@ -1,31 +1,30 @@
 import styles from './footer.module.css'
 import Compnan from '../../components/Card/card'
-import { CiLocationOn } from "react-icons/ci";
 import { IoMdCall } from "react-icons/io";
-import { AiOutlineMail } from "react-icons/ai";
-import { CiFacebook } from "react-icons/ci";
-import { CiTwitter } from "react-icons/ci";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineMail,AiOutlineInstagram } from "react-icons/ai";
+import { CiFacebook,CiTwitter,CiLocationOn } from "react-icons/ci";
 import { BsVoicemail } from "react-icons/bs";
+import { PiGraduationCapThin, PiVideoCameraLight,PiUsersLight,PiUsersThreeThin  } from "react-icons/pi"
+
 
 const Footer = () => {
     return(
         <>
-        <div className={styles.footer}>
-            <div className='footer w-full flex items-center justify-around px-52 pb-48 ' >
-              <Compnan description='محاضر'   background='bg-orange-500 rounded-full p-2'   icon="inst"  />
-              <Compnan description='طالب'    background='bg-green-500 rounded-full  p-2'   icon="stud"  />
-              <Compnan description='فيديو'   background='bg-sky-600 rounded-full    p-2'   icon="vid"  />
-              <Compnan description='مستخدم'  background='bg-violet-600 rounded-full p-2'   icon="user"  />
+        <div className={styles.footer}>   
+            <div className='footer w-full grid grid-cols-2 sm:grid-cols-4 sm:px-10 md:grid-cols-4 md:px-20 lg:grid-cols-4 lg:px-52 lg:gap-16 items-center justify-around  pb-48 ' >
+              <Compnan description='محاضر'   className='bg-orange-500 rounded-full p-2'   icon= {<PiGraduationCapThin  className=' w-8 h-8 items-center justify-center  text-white'/>} />
+              <Compnan description='طالب'    className='bg-green-500 rounded-full  p-2'   icon={<PiUsersLight className=' w-8 h-8 items-center justify-center text-white'  />} />
+              <Compnan description='فيديو'   className='bg-sky-600 rounded-full    p-2'   icon={<PiVideoCameraLight className=' w-8 h-8 items-center justify-center text-white' />} />
+              <Compnan description='مستخدم'  className='bg-primary rounded-full p-2'   icon={<PiUsersThreeThin   className=' w-8 h-8  items-center justify-center text-white' />}  />
             </div> 
-            <div className='bg-violet-600 px-24 pt-16 pb-4 text-gray-300 -mt-56'>
-              <div className='flex'>
+            <div className='bg-primary  px-24 pt-16 pb-4 text-textColor -mt-56'>
+              <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
               <div>
                  <div className=' flex '>
                     <img src={require("../../assets/icons/logo.png" )}  alt="" className=' w-16 h-12 rounded-full'/>
-                    <h1 className=' font-bold pr-3 pt-3 text-lg text-white'>مكــــاوش</h1>
+                    <h1 className=' font-bold pr-3 pt-3 text-lg text-textColorprimary'>مكــــاوش</h1>
                  </div>
-                 <p className=' w-96 text-sm py-8 text-start font-extralight'>You’re not connected
+                 <p className=' grid w-96 text-sm py-8 text-start font-extralight sm:w-48 md:w-60 lg:w-96'>You’re not connected
                     And the web just isn’t the same without you. 
                     Let’s get you back online
                     Check that your network cables are plugged in.
@@ -49,11 +48,12 @@ const Footer = () => {
                     </div>
                 </div>
               </div>
-              <div className=' w-full h-0.5 bg-gray-500 mt-8'></div>
-              <div className='flex justify-between pt-6 text-sm'><span>Copyright 2023 | All Rights Reserved</span><div className='flex justify-between w-28'><CiFacebook /><CiTwitter /><AiOutlineInstagram /><BsVoicemail /></div></div>
+              <div className=' w-full h-0.5 bg-textColor '></div>
+             
+              <div className=' grid grid-flow-row  grid-cols-2 justify-between pt-6 text-sm'><div className=' text-start w-auto'><span>Copyright 2023 | All Rights Reserved</span></div><div className='flex justify-between w-48 pr-16 text-start mr-96'><CiFacebook /><CiTwitter /><AiOutlineInstagram /><BsVoicemail /></div></div>
             </div>
               
-        </div>
+        </div> tex
         </>
     )
    
