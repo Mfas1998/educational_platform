@@ -11,7 +11,7 @@ const Footer = () => {
     return(
         <>
         <div className={styles.footer}>   
-            <div className='footer w-full grid grid-cols-2 sm:grid-cols-4 sm:px-10 md:grid-cols-4 md:px-20 lg:grid-cols-4 lg:px-52 lg:gap-16 items-center justify-around  pb-48 ' >
+            <div className='footer w-full grid grid-colsz-2 sm:grid-cols-4 sm:px-10 md:grid-cols-4 md:px-20 lg:grid-cols-4 lg:px-52 lg:gap-16 items-center justify-around  pb-48 ' >
               <Compnan description='محاضر'   className='bg-orange-500 rounded-full p-2'   icon= {<PiGraduationCapThin  className=' w-8 h-8 items-center justify-center  text-white'/>} />
               <Compnan description='طالب'    className='bg-green-500 rounded-full  p-2'   icon={<PiUsersLight className=' w-8 h-8 items-center justify-center text-white'  />} />
               <Compnan description='فيديو'   className='bg-sky-600 rounded-full    p-2'   icon={<PiVideoCameraLight className=' w-8 h-8 items-center justify-center text-white' />} />

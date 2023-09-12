@@ -12,7 +12,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="flex justify-around items-center bg-white h-14 p-4
+      className="w-full flex justify-around items-center bg-white h-14 p-4
       text-textColor text-xl max-[700px]:justify-between "
     >
       <Drawer
