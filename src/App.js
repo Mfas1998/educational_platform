@@ -2,7 +2,7 @@ import './App.css';
 import Routers from './Routers/Routers';
 function App() {
   return (
-    <div className='overflow-scroll'>
+    <div className=''>
      <Routers/>
     </div>
   );
