@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
       <div className="bg-primary px-20 pt-16 pb-4 text-gray-300 text-sm -mt-56 w-full">
 
-        <div className="grid grid-cols-4 max-[700px]:grid-cols-2 place-items-center">
+        <div className="grid grid-cols-4 max-[700px]:grid-cols-2 items-center justify-center">
 
           <div className="" >
             <div className=" flex  gap-4 items-center justify-start">
@@ -68,7 +68,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="text-start pt-6 font-bold place-items-center justify-center">
+          <div className=" grid text-start pt-6 font-bold items-center justify-center">
             <h1 className="font-bold text-lg font-serif text-white">الروابط السريعة</h1>
             <div className="py-8">
             <div className="grid grid-cols-2 gap-x-7 gap-y-5 ">
@@ -123,7 +123,7 @@ const Footer = () => {
 
         <div className=" flex justify-between pt-6 text-sm">
           <div className=" text-start w-auto">
-            <span>Copyright 2023 | All Rights Reserved</span>
+            <span>Copyright 2023 | All Rights Reservedd</span>
           </div>
           <div className="flex justify-between text-start gap-7">
             <Link to="#" className=" block ">
