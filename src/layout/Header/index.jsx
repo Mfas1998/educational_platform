@@ -12,7 +12,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="w-full flex justify-around items-center bg-white h-14 p-4 text-textColor text-xl max-[700px]:justify-between "
+      className="w-full flex justify-between items-center bg-white h-14 p-4 text-textColor text-xl"
     >
       <Drawer
         open={open}
@@ -66,9 +66,9 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="flex gap-6 items-center max-[700px]:hidden  ">
+      <div className="flex gap-6 items-center max-[700px]:hidden ">
         <Link to="/login">تسجيل الدخول</Link>
-        <Link className="bg-primary rounded-full px-4 py-1 text-white ">
+        <Link className="bg-primary text-center rounded-full px-4 py-1 text-white ">
           تواصل معنا
         </Link>
       </div>
