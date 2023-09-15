@@ -1,4 +1,3 @@
-//import { Footer } from "antd/es/layout/layout"
 import Header from "../../layout/Header"
 import Footer from "../../layout/Footer"
 
