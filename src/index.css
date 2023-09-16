@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base{
+  *{
+
+    
+  }
     input{
     @apply text-center focus:border-primary
   }}
