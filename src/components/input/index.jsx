@@ -1,13 +1,9 @@
-import { Input } from 'antd'
+import { Input } from "antd";
 const InputComponent = (props) => {
-  return (
-   <Input
-   {...props}
-   />
-  )
+  return <Input {...props} />;
+};
+
+export function InputPasswordComponent(props) {
+  return <Input.Password {...props} />;
 }
-
-
-// export InputPasswordComponent=()=>{}
-
-export default InputComponent
+export default InputComponent;

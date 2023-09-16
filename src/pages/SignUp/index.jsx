@@ -1,14 +1,14 @@
 import React from "react";
-import InputComponent from "../../components/input";
+import InputComponent, { InputPasswordComponent } from "../../components/input";
 import { Checkbox, Form,  } from "antd";
 import ButtonComponent from "../../components/Button";
 import { GoogleOutlined } from "@ant-design/icons";
 
 const SignUp = () => {
   return (
-    <div className=" flex h-[100vh] items-center justify-center bg-slate-400 ">
+    <div className=" flex h-[100vh] items-center justify-center ">
 
-      <div className="bg-white p-2">
+      <div className="p-2">
        <Form>
         <div>
           <p className="text-xl">إنشاء حساب</p>
@@ -29,11 +29,17 @@ const SignUp = () => {
               />
             </Form.Item>
             <Form.Item name="password">
-              <InputComponent
-               type='password'
+              <InputPasswordComponent
                 placeholder="كلمة المرور"
                 id="password"
                 className=" focus:border-primary text-center"
+              />
+            </Form.Item>
+            <Form.Item name="passwordConfirmation">
+              <InputPasswordComponent
+                placeholder="تأكيد كلمة المرور"
+                id="passwordConfirmation"
+                className=" focus:border-primary !text-center"
               />
             </Form.Item>
         </div>
