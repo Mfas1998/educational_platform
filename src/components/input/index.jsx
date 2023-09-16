@@ -7,4 +7,7 @@ const InputComponent = (props) => {
   )
 }
 
+
+// export InputPasswordComponent=()=>{}
+
 export default InputComponent
