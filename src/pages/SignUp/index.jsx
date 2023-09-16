@@ -58,7 +58,7 @@ const SignUp = () => {
           </div>
             <p className="text-xl my-3 w-full text-center  before:inline-block before:w-[46%] before:h-0.5 before:bg-primary  after:inline-block after:w-[46%] after:h-0.5 after:bg-primary ">
               or
-              </p>
+              </p> 
           <ButtonComponent
             title="تسجيل بإستخدام جوجل"
             icon={<FcGoogle />}
