@@ -30,6 +30,7 @@ const SignUp = () => {
             </Form.Item>
             <Form.Item name="password">
               <InputPasswordComponent
+               required
                 placeholder="كلمة المرور"
                 id="password"
                 className=""
@@ -37,6 +38,7 @@ const SignUp = () => {
             </Form.Item>
             <Form.Item name="passwordConfirmation">
               <InputPasswordComponent
+               required
                 placeholder="تأكيد كلمة المرور"
                 id="passwordConfirmation"
                 className=""
@@ -45,7 +47,7 @@ const SignUp = () => {
           </div>
           <div className="flex gap-3 items-center justify-center">
             <Form.Item className="m-0">
-              <Checkbox />
+              <Checkbox className="" />
             </Form.Item>
             <p>I accept the terms & Conditions</p>
             <ButtonComponent
@@ -54,19 +56,16 @@ const SignUp = () => {
               className="bg-primary text-textColorprimary rounded-full"
             />
           </div>
-
-          <div className="text-xl flex gap-2 items-center justify-center">
-            <p className="w-full h-0.5 bg-primary"></p>
-            <p className="text-center">or</p>
-            <p className="w-full h-0.5 bg-primary"></p>
-          </div>
+            <p className="text-xl my-3 w-full text-center  before:inline-block before:w-[46%] before:h-0.5 before:bg-primary  after:inline-block after:w-[46%] after:h-0.5 after:bg-primary ">
+              or
+              </p>
           <ButtonComponent
-            title="Sign Up with Google"
+            title="تسجيل بإستخدام جوجل"
             icon={<FcGoogle />}
-            className="rounded-full w-full  mt-3"
+            className="rounded-full w-full"
           />
           <ButtonComponent
-            title="Sign Up with Facebook"
+            title="تسجيل بإستخدام فيسبوك"
             icon={<FaFacebookF className="text-blue-700" />}
             className="rounded-full w-full mt-3"
           />
