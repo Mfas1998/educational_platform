@@ -2,7 +2,7 @@ import React from "react";
 import InputComponent, { InputPasswordComponent } from "../../components/input";
 import { Checkbox, Form,  } from "antd";
 import ButtonComponent from "../../components/Button";
-import { GoogleOutlined } from "@ant-design/icons";
+import { FcGoogle } from 'react-icons/fc';
 
 const SignUp = () => {
   return (
@@ -32,7 +32,7 @@ const SignUp = () => {
               <InputPasswordComponent
                 placeholder="كلمة المرور"
                 id="password"
-                className=" focus:border-primary text-center"
+                className=" focus:border-primary placeholder:!text-center text-center"
               />
             </Form.Item>
             <Form.Item name="passwordConfirmation">
@@ -61,7 +61,7 @@ const SignUp = () => {
           <p className="text-center">or</p>
           <p className="w-full h-0.5 bg-primary"></p>
         </div>
-       <ButtonComponent title='Sign Up with Google' icon={<GoogleOutlined/>} className='rounded-full w-full' />
+       <ButtonComponent title='Sign Up with Google' icon={<FcGoogle/>} className='rounded-full w-full' />
       </Form>
       </div>
 

@@ -4,6 +4,6 @@ const InputComponent = (props) => {
 };
 
 export function InputPasswordComponent(props) {
-  return <Input.Password {...props} />;
+  return <Input.Password  {...props} />;
 }
 export default InputComponent;
