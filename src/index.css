@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 @layer base{
-    input[type="password"]{
-    @apply text-center
+    input{
+    @apply text-center focus:border-primary
   }}
