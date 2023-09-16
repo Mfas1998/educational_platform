@@ -68,6 +68,7 @@ const Header = () => {
       </div>
       <div className="flex gap-6 items-center max-[700px]:hidden ">
         <Link to="/login">تسجيل الدخول</Link>
+        <Link to="signup">أشتراك</Link>
         <Link className="bg-primary text-center rounded-full px-4 py-1 text-white ">
           تواصل معنا
         </Link>
