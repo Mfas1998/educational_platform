@@ -63,7 +63,7 @@ const SignUp = () => {
           <ButtonComponent
             title="Sign Up with Google"
             icon={<FcGoogle />}
-            className="rounded-full w-full"
+            className="rounded-full w-full  mt-3"
           />
           <ButtonComponent
             title="Sign Up with Facebook"
