@@ -24,7 +24,7 @@ const Header = () => {
           <Link to="#" className="text-textColor text-xl">
             تسجيل دخول
           </Link>
-          <Link to="#" className="text-textColor text-xl"> 
+          <Link to="#" className="text-textColor text-xl">
             إنشاء حساب
           </Link>
         </Space>
