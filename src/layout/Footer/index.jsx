@@ -13,7 +13,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="w-full mt-auto">
+    <div className="w-full mt-8">
       <div className="flex items-center justify-center gap-5 pb-48 ">
         <Card
           description="محاضر"

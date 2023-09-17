@@ -8,17 +8,16 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className=" flex h-[100vh] items-center justify-center text-ellipsis">
+    <div className=" flex h-[100vh] items-center  justify-center text-ellipsis">
       <div className="p-2">
         <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
-
         <Form>
           <div>
             <Form.Item name="email">
               <InputComponent
                 placeholder="الايميل"
                 id="email"
-                className=" focus:border-primary text-center"
+                className=" focus:border-primary "
               />
             </Form.Item>
             <Form.Item name="password">
@@ -31,7 +30,7 @@ const Login = () => {
             </Form.Item>
 
             <div className="flex gap-3 justify-between">
-              <div className="flex gap-3">
+              <div className="flex gap-3 items-center">
                 <Form.Item className="m-0">
                   <Checkbox className="" />
                 </Form.Item>
@@ -46,17 +45,17 @@ const Login = () => {
           </div>
         </Form>
 
-        <p className="text-xl my-5 w-full text-center  before:inline-block before:w-[40%] before:h-0.5 before:bg-primary before:ml-4 after:mr-4 after:inline-block  after:w-[40%] after:h-0.5 after:bg-primary ">
+        <p className="flex  items-center text-xl my-5 w-full  before:inline-block before:w-[40%] before:h-0.5 before:bg-primary before:ml-3 after:mr-4 after:inline-block  after:w-[40%] after:h-0.5 after:bg-primary ">
           or
         </p>
         <ButtonComponent
           title="دخول بإستخدام جوجل"
-          icon={<FcGoogle className="ml-6" />}
+          icon={<FcGoogle  />}
           className="rounded-full w-full "
         />
         <ButtonComponent
           title="دخول بإستخدام فيسبوك"
-          icon={<FaFacebookF className="text-blue-700 ml-6" />}
+          icon={<FaFacebookF className="text-blue-700" />}
           className="rounded-full w-full mt-3"
         />
         <p className="text-center mt-8">

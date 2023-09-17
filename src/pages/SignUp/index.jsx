@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
-    <div className=" flex h-[100vh] items-center justify-center ">
+    <div className=" flex h-[100vh] items-center justify-center text-ellipsis ">
       <div className="p-2">
-      <p className="text-xl">إنشاء حساب</p>
+        <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
         <Form>
           <div>
             <Form.Item name="userName">
@@ -45,30 +45,31 @@ const SignUp = () => {
                 className=""
               />
             </Form.Item>
-          </div>
-          <div className="flex gap-3 items-center justify-between">
-            <div className="flex gap-3 items-center">
-              <Form.Item className="m-0">
-                <Checkbox className="" />
-              </Form.Item>
-              <p>اوافق على الاحكام والشروط</p>
-            </div>
 
-            <ButtonComponent
-              htmlType="submit"
-              title="SIGN UP"
-              className="bg-primary text-textColorprimary rounded-full"
-            />
+            <div className="flex gap-3  justify-between">
+              <div className="flex gap-3 items-center">
+                <Form.Item className="m-0">
+                  <Checkbox className="" />
+                </Form.Item>
+                <p>اوافق على الاحكام والشروط</p>
+              </div>
+
+              <ButtonComponent
+                htmlType="submit"
+                title="SIGN UP"
+                className="bg-primary text-textColorprimary rounded-full"
+              />
+            </div>
           </div>
         </Form>
 
-        <p className="text-xl my-5 w-full text-center  before:inline-block before:ml-3 before:w-[40%] before:h-0.5 before:bg-primary  after:inline-block after:mr-3 after:w-[40%] after:h-0.5 after:bg-primary ">
+        <p className="flex items-center text-xl my-5 w-full  before:inline-block before:w-[40%] before:h-0.5 before:bg-primary before:ml-4 after:mr-4 after:inline-block  after:w-[40%] after:h-0.5 after:bg-primary ">
           or
         </p>
         <ButtonComponent
           title="تسجيل بإستخدام جوجل"
           icon={<FcGoogle />}
-          className="rounded-full w-full"
+          className="rounded-full w-full "
         />
         <ButtonComponent
           title="تسجيل بإستخدام فيسبوك"
@@ -76,7 +77,10 @@ const SignUp = () => {
           className="rounded-full w-full mt-3"
         />
         <p className="text-center mt-8 ">
-         لديك حساب بالفعل ؟ <Link to="/Login" className="font-bold">تسجيل الدخول</Link>
+          لديك حساب بالفعل ؟{" "}
+          <Link to="/Login" >
+            تسجيل الدخول
+          </Link>
         </p>
       </div>
     </div>
