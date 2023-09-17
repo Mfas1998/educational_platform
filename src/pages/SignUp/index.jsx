@@ -10,9 +10,9 @@ const SignUp = () => {
   return (
     <div className=" flex h-[100vh] items-center justify-center ">
       <div className="p-2">
+      <p className="text-xl">إنشاء حساب</p>
         <Form>
           <div>
-            <p className="text-xl">إنشاء حساب</p>
             <Form.Item name="userName">
               <InputComponent
                 required
