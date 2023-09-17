@@ -68,7 +68,7 @@ const SignUp = () => {
         </p>
         <ButtonComponent
           title="تسجيل بإستخدام جوجل"
-          icon={<FcGoogle />}
+          icon={<FcGoogle className="" />}
           className="rounded-full w-full "
         />
         <ButtonComponent
