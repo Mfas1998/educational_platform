@@ -8,8 +8,8 @@ import { FaFacebookF } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className=" flex h-[100vh] items-center  justify-center text-ellipsis">
-      <div className="p-2">
+    <div className="flex justify-center text-ellipsis">
+      <div className="py-2">
         <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
         <Form>
           <div>
