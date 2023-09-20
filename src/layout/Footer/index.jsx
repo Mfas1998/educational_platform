@@ -16,28 +16,36 @@ const Footer = () => {
     <div className="w-full mt-8">
       <div className="flex items-center justify-center gap-5 pb-48 ">
         <Card
+          styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
           description="محاضر"
+          counter="2000"
           className="bg-orange-500 rounded-full grid place-self-center p-1 "
           icon={
             <PiGraduationCapThin className=" w-8 h-8 items-center justify-center  text-white" />
           }
         />
         <Card
+          styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
           description="طالب"
+          counter="300"
           className="bg-green-500 rounded-full grid place-self-center p-1 "
           icon={
             <PiUsersLight className=" w-8 h-8 items-center justify-center text-white " />
           }
         />
         <Card
+          styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
           description="فيديو"
+          counter="400"
           className="bg-sky-600 rounded-full grid place-self-center p-1"
           icon={
             <PiVideoCameraLight className=" w-8 h-8 items-center justify-center text-white" />
           }
         />
         <Card
+          styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
           description="مستخدم"
+          counter="500"
           className="bg-primary rounded-full grid place-self-center p-1"
           icon={
             <PiUsersThreeThin className=" w-8 h-8 items-center justify-center text-white" />
@@ -45,10 +53,8 @@ const Footer = () => {
         />
       </div>
       <div className="bg-primary px-20 pt-16 pb-4 text-gray-300 text-sm -mt-56 w-full">
-
         <div className="grid grid-cols-4 max-[700px]:grid-cols-2 items-center justify-center">
-
-          <div className="" >
+          <div className="">
             <div className=" flex  gap-4 items-center justify-start">
               <img
                 //src={require("../../assets/icons/logo.png")}
@@ -69,30 +75,33 @@ const Footer = () => {
             </div>
           </div>
           <div className=" grid text-start pt-6 font-bold items-center justify-center">
-            <h1 className="font-bold text-lg font-serif text-white">الروابط السريعة</h1>
+            <h1 className="font-bold text-lg font-serif text-white">
+              الروابط السريعة
+            </h1>
             <div className="py-8">
-            <div className="grid grid-cols-2 gap-x-7 gap-y-5 ">
-              <p>
-                <Link to="#">عنا</Link>
-              </p>
-              <p>
-                <Link to="#">مـدونة</Link>
-              </p>
-              <p>
-                <Link to="#">كورسات</Link>
-              </p>
-              <p>
-                <Link to="#"> تواصل بنا</Link>
-              </p>
+              <div className="grid grid-cols-2 gap-x-7 gap-y-5 ">
+                <p>
+                  <Link to="#">عنا</Link>
+                </p>
+                <p>
+                  <Link to="#">مـدونة</Link>
+                </p>
+                <p>
+                  <Link to="#">كورسات</Link>
+                </p>
+                <p>
+                  <Link to="#"> تواصل بنا</Link>
+                </p>
               </div>
             </div>
           </div>
           <div className=" text-start pt-6  place-items-center justify-center">
-            <h1 className="font-bold font-serif text-lg text-white">أتصل بنا</h1>
+            <h1 className="font-bold font-serif text-lg text-white">
+              أتصل بنا
+            </h1>
             <div className="grid py-8  gap-y-5">
               <div className="flex gap-3 ">
                 <p>
-                 
                   <IoMdCall />
                 </p>
                 <p>
@@ -101,7 +110,6 @@ const Footer = () => {
               </div>
               <div className="flex gap-3 ">
                 <p>
-                
                   <AiOutlineMail />
                 </p>
                 <p>
@@ -111,8 +119,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex gap-3 justify-center items-center pt-2">
-            <p> 
-              <CiLocationOn /> 
+            <p>
+              <CiLocationOn />
             </p>
             <p>
               <Link to="#">40 Yem dr.Taiz gmall street</Link>

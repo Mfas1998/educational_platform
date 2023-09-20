@@ -2,7 +2,7 @@ import { Drawer, Space } from "antd";
 import logo from "../../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
 import ButtonComponent from "../../components/Button";
-import {
+import { 
   MenuOutlined,
   SearchOutlined,
   ShoppingCartOutlined,
