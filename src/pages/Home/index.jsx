@@ -2,6 +2,8 @@ import Card, { CourseCard } from "../../components/Card/card";
 import logo from "../../assets/images/lerning.jpg";
 import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
+import { Reveal } from "../../components/utils/Reveal";
+import React from "react";
 const Home = () => {
   let x = [1, 2, 3, 4,5,6,7];
   return (
