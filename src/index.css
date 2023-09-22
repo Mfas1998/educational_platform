@@ -11,4 +11,11 @@
     }
     input{
     @apply text-center focus:border-primary
-  }}
+  }
+}
+
+.scroll-w-0::-webkit-scrollbar{
+
+  width: 0;
+
+}
