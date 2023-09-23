@@ -9,7 +9,7 @@ import { FaFacebookF } from "react-icons/fa";
 const Login = () => {
   return (
     <div className="flex justify-center text-ellipsis">
-      <div className="py-2 shadow-[0_0_7px_rgba(0,0,0,0.2)] rounded-lg">
+      <div className="p-2 shadow-[0_0_7px_rgba(0,0,0,0.2)] rounded-lg">
         <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
         <Form>
           <div>
