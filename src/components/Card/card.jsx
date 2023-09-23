@@ -33,7 +33,7 @@ function Card(props) {
 export function CourseCard(props) {
   return (
     <div
-      className="rounded-2xl h-[250px] min-w-[260px] mt-4 bg-white"
+      className="rounded-2xl h-[250px] w-[260px] mt-4 bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
     >
       <div>
         <img src={img} alt="" className="h-[100px] w-full rounded-t-2xl" />

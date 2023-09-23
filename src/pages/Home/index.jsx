@@ -5,7 +5,7 @@ import ButtonComponent from "../../components/Button";
 import { Reveal } from "../../components/utils/Reveal";
 import React from "react";
 const Home = () => {
-  let x = [1, 2, 3, 4,5,6,7];
+  let x = [1, 2, 3,4];
   return (
     <div className="bg-slate-50">
       <div className="p-8 ">
@@ -19,7 +19,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-6 mt-5 overflow-x-scroll scroll-w-0">
+        <div className="flex items-center justify-center gap-6 mt-5">
           {x.map((e) => {
             console.log(e);
             return <CourseCard key={e} />;

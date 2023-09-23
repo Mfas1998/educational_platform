@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
-    <div className=" flex h-[100vh] items-center justify-center text-ellipsis ">
-      <div className="p-2">
+    <div className=" flex h-[100vh] items-center justify-center  ">
+      <div className="p-2 shadow-[0_0_7px_rgba(0,0,0,0.2)] rounded-lg">
         <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
         <Form>
           <div>
