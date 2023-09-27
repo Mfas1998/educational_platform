@@ -33,12 +33,12 @@ function Card(props) {
 export function CourseCard(props) {
   return (
     <div
-      className="rounded-2xl h-[250px] w-[260px] mt-4 bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
+      className="rounded-2xl h-[255px] min-w-[230px] max-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
     >
       <div>
         <img src={img} alt="" className="h-[100px] w-full rounded-t-2xl" />
       </div>
-      <div className="p-3 h-[150px] ">
+      <div className="p-3 h-[155px] ">
         <div className="flex items-center justify-between text-[10px]">
           <Rate allowHalf defaultValue={2.5} className="text-[10px]" />
           <div className="flex items-center gap-2  ">
@@ -59,9 +59,13 @@ export function CourseCard(props) {
               <p className="font-bold">Wade Warren</p>
               <p>Web Developer</p>
            </div>
-            <img src={img} alt="" className="h-7 w-7 rounded-full"/>
+            <img src={img} alt="" className="h-8 w-8 rounded-full"/>
           </div>
         </div>
+        <div className="flex items-center justify-evenly">
+            <p className="line-through">120$</p>
+            <p>100$</p>
+          </div>
       </div>
     </div>
   );

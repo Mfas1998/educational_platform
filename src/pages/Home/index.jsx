@@ -3,9 +3,16 @@ import logo from "../../assets/images/lerning.jpg";
 import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
 import { Reveal } from "../../components/utils/Reveal";
-import React from "react";
+import React, { useRef } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const Home = () => {
-  let x = [1, 2, 3,4];
+ const ref =useRef(null);
+
+ const scroll=(scrollOffset)=>{
+  ref.current.scrollLeft+=scrollOffset;
+ }
+
+  let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <div className="bg-slate-50">
       <div className="p-8 ">
@@ -19,15 +26,32 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-6 mt-5">
-          {x.map((e) => {
-            console.log(e);
-            return <CourseCard key={e} />;
-          })}
+        <div className="relative flex items-center">
+          <ButtonComponent
+          onClick={()=>{
+            scroll(-300);
+          }}
+            title={<AiOutlineArrowRight className="text-5xl text-textColorprimary" />}
+            className="max-[700px]:hidden absolute h-12 p-0 rounded-full bg-primary  text-5xl right-0 z-50 "
+          />
+
+          <div
+          ref={ref}
+            className="flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0  "
+          >
+            {x.map((e) => {
+              return <CourseCard key={e} />;
+            })}
+          </div>
+          <ButtonComponent
+           onClick={()=>{
+            scroll(300);
+          }}
+            title={<AiOutlineArrowLeft className="text-5xl text-textColorprimary" />}
+            className="max-[700px]:hidden absolute h-12 p-0 rounded-full bg-primary  text-5xl left-0 z-50 "
+          />
         </div>
       </div>
-
-
 
       <div>
         <div className=" flex flex-col items-center justify-center py-11">
