@@ -5,6 +5,7 @@ import ButtonComponent from "../../components/Button";
 // import { Reveal } from "../../components/utils/Reveal";
 import React, { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Home = () => {
   const  data={
     img:logo,
