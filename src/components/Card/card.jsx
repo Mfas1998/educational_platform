@@ -1,9 +1,8 @@
-import { AiFillPlayCircle } from "react-icons/ai";
-import img from "../../assets/images/lerning.jpg";
 import { Rate } from "antd";
+import { motion } from 'framer-motion';
 import React from "react";
-import {motion} from 'framer-motion'
- 
+import { AiFillPlayCircle } from "react-icons/ai"; 
+import { Link } from "react-router-dom";
 function Card(props) {
   return (
     <motion.div
@@ -32,23 +31,24 @@ function Card(props) {
 
 export function CourseCard(props) {
   return (
+    <Link to='course'>
     <div
-      className="rounded-2xl h-[255px] min-w-[230px] max-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
+      className="rounded-2xl h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
     >
       <div>
-        <img src={img} alt="" className="h-[100px] w-full rounded-t-2xl" />
+        <img src={props.data.img} alt="" className="h-[100px] w-full rounded-t-2xl" />
       </div>
       <div className="p-3 h-[155px] ">
         <div className="flex items-center justify-between text-[10px]">
-          <Rate allowHalf defaultValue={2.5} className="text-[10px]" />
+          <Rate allowHalf defaultValue={props.data.rate} className="text-[10px]" />
           <div className="flex items-center gap-2  ">
-            <p>25x Lesson</p>
+            <p>{props.data.lessonsNumber} </p>
             <AiFillPlayCircle className="text-green-500 text-[18px]" />
-          </div>
+          </div> 
         </div>
-
+  
         <p className=" text-sm text-left my-2">
-          Powerful mental tools to help you master tough subject
+         {props.data.title}
         </p>
         <hr/>
         <div className="flex items-center justify-between mt-2 h-max text-[10px] ">
@@ -56,18 +56,18 @@ export function CourseCard(props) {
 
           <div className="flex items-center gap-2 ">
            <div>
-              <p className="font-bold">Wade Warren</p>
-              <p>Web Developer</p>
+              <p className="font-bold">{props.data.teacher}</p>
+              <p>{props.data.field}</p>
            </div>
-            <img src={img} alt="" className="h-8 w-8 rounded-full"/>
+            <img src={props.data.teacherImage} alt="" className="h-8 w-8 rounded-full"/>
           </div>
         </div>
         <div className="flex items-center justify-evenly">
-            <p className="line-through">120$</p>
-            <p>100$</p>
+            <p className="line-through">{props.data.oldPrice}</p>
+            <p>{props.data.price}</p>
           </div>
       </div>
-    </div>
+    </div></Link>
   );
 }
 export default Card;

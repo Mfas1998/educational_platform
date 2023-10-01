@@ -7,13 +7,29 @@
     /* font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
     	font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
       /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
-    
     }
     input{
     @apply text-center focus:border-primary
   }
   
 }
+.active-video{
+  background-color:#2980b9 !important ;
+    }
+    .active-video h3{
+  color: #fff;
+  font-size: 18px;
+    }
 .scroll-w-0::-webkit-scrollbar{
   width: 0;
+}
+.video-list::-webkit-scrollbar{
+  width: 7px;
+}
+.video-list::-webkit-scrollbar-track{
+background: #ccc;
+border-radius: 50px;}
+.video-list::-webkit-scrollbar-thumb{
+background: #666;
+border-radius: 50px;
 }

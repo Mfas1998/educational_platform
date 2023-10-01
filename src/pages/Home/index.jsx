@@ -2,15 +2,26 @@ import Card, { CourseCard } from "../../components/Card/card";
 import logo from "../../assets/images/lerning.jpg";
 import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
-import { Reveal } from "../../components/utils/Reveal";
+// import { Reveal } from "../../components/utils/Reveal";
 import React, { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const Home = () => {
- const ref =useRef(null);
+  const  data={
+    img:logo,
+    rate:3,
+    lessonsNumber:25,
+    title:' Powerful mental tools to help you master tough subject',
+    teacher:'Mohammed Fuad',
+    field:'Web Developer',
+    oldPrice:'150$',
+    price:'100$',
+    teacherImage:logo,
 
- const scroll=(scrollOffset)=>{
-  ref.current.scrollLeft+=scrollOffset;
- }
+  }
+  const ref = useRef(null);
+  const scroll = (scrollOffset) => {
+    ref.current.scrollLeft += scrollOffset;
+  };
 
   let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
@@ -28,26 +39,30 @@ const Home = () => {
 
         <div className="relative flex items-center">
           <ButtonComponent
-          onClick={()=>{
-            scroll(-300);
-          }}
-            title={<AiOutlineArrowRight className="text-5xl text-textColorprimary" />}
+            onClick={() => {
+              scroll(-300);
+            }}
+            title={
+              <AiOutlineArrowRight className="text-5xl text-textColorprimary" />
+            }
             className="max-[700px]:hidden absolute h-12 p-0 rounded-full bg-primary  text-5xl right-0 z-50 "
           />
 
           <div
-          ref={ref}
+            ref={ref}
             className="flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0  "
           >
             {x.map((e) => {
-              return <CourseCard key={e} />;
+              return <CourseCard key={e} data={data} />;
             })}
           </div>
           <ButtonComponent
-           onClick={()=>{
-            scroll(300);
-          }}
-            title={<AiOutlineArrowLeft className="text-5xl text-textColorprimary" />}
+            onClick={() => {
+              scroll(300);
+            }}
+            title={
+              <AiOutlineArrowLeft className="text-5xl text-textColorprimary" />
+            }
             className="max-[700px]:hidden absolute h-12 p-0 rounded-full bg-primary  text-5xl left-0 z-50 "
           />
         </div>

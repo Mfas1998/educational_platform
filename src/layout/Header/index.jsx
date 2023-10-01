@@ -1,13 +1,9 @@
 import { Drawer, Space } from "antd";
-import logo from "../../assets/images/logo.jpg";
-import { Link } from "react-router-dom";
-import ButtonComponent from "../../components/Button";
-import { 
-  MenuOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@ant-design/icons";
 import { useState } from "react";
+import { AiOutlineMenu, AiOutlineSearch, AiOutlineShoppingCart } from 'react-icons/ai';
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg";
+import ButtonComponent from "../../components/Button";
 const Header = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -33,7 +29,7 @@ const Header = () => {
       <div className="text-textColor hidden max-[700px]:block ">
         <ButtonComponent
           className="border-none"
-          icon={<MenuOutlined className="text-textColor hover:text-primary" />}
+          icon={<AiOutlineMenu className="text-textColor hover:text-primary" />}
           onClick={() => {
             setOpen(true);
           }}
@@ -45,8 +41,8 @@ const Header = () => {
       </div>
       <div className="hidden max-[700px]:block">
         <Space>
-          <SearchOutlined />
-          <ShoppingCartOutlined />
+          <AiOutlineSearch />
+          <AiOutlineShoppingCart />
         </Space>
       </div>
 
