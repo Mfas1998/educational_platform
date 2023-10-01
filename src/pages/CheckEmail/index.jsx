@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import ButtonComponent from "../../components/Button";
 import { AiOutlineMail } from "react-icons/ai";

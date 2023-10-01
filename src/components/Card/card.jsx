@@ -1,6 +1,5 @@
 import { Rate } from "antd";
 import { motion } from 'framer-motion';
-import React from "react";
 import { AiFillPlayCircle } from "react-icons/ai"; 
 import { Link } from "react-router-dom";
 function Card(props) {

@@ -1,4 +1,3 @@
-import React from "react";
 import InputComponent, { InputPasswordComponent } from "../../components/input";
 import { Checkbox, Form } from "antd";
 import ButtonComponent from "../../components/Button";

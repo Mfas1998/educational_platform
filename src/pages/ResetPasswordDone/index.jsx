@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
 import ButtonComponent from "../../components/Button";
 // import InputComponent from "../../components/input";
 import { BsCheckCircle } from "react-icons/bs";
