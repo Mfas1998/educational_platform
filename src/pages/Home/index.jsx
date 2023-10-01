@@ -118,14 +118,15 @@ const Home = () => {
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
             />{" "}
+            <Link to="/studentCourses">
             <Card
-              text="طالب"
+              text="StudentCourses"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
               className=" bg-red-600 rounded-full grid place-self-center p-1  "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
-            />
+            /></Link>
           </div>
         </div>
         <div className="grid grid-cols-2 justify-center place-items-center">
