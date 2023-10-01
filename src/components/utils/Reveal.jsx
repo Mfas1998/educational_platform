@@ -2,15 +2,16 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 export function Reveal({ children, width = "fit-content" }) {
   const ref=useRef(null);
-  const isInView = useInView(ref, {once: true});
+  const isInView = useInView(ref, {root: true});
 
   const mainControls=useAnimation();
-  const slideControls=useAnimation();
+  // const slideControls=useAnimation();
 
   useEffect(()=>{
     if(isInView) {
-      mainControls.start("visible");
-      slideControls.start("");
+      mainControls.sec("visible");
+      console.log(isInView)
+      //slideControls.start("");
     }
   },[isInView])
   return (
