@@ -11,7 +11,7 @@ const Login = () => {
     <div className="flex justify-center text-ellipsis">
       <div className="p-2 shadow-[0_0_7px_rgba(0,0,0,0.2)] rounded-lg">
         <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
-        <Form>
+        <Form> 
           <div>
             <Form.Item name="email">
               <InputComponent
@@ -29,19 +29,20 @@ const Login = () => {
               />
             </Form.Item>
 
-            <div className="flex gap-3 justify-between">
+            <div className="flex gap-3 justify-between items-center my-3">
               <div className="flex gap-3 items-center">
                 <Form.Item className="m-0">
                   <Checkbox className="" />
                 </Form.Item>
                 <p>تذكرني</p>
               </div>
-              <ButtonComponent
-                htmlType="submit"
-                title="SIGN UP"
-                className="bg-primary text-textColorprimary rounded-full"
-              />
+              <Link to='/ForgotPassword' className=" text-textColor font-bold hover:text-primary">Forgot password</Link>
             </div>
+            <ButtonComponent
+                htmlType="submit"
+                title="Login"
+                className="bg-primary text-textColorprimary rounded-full w-full"
+              />
           </div>
         </Form>
 
@@ -59,7 +60,7 @@ const Login = () => {
           className="rounded-full w-full mt-3"
         />
         <p className="text-center mt-8">
-          مستخدم جديد ؟ <Link to="/signup" className="font-bold">إنشاء حساب</Link>
+          مستخدم جديد ؟ <Link to="/signUp" className="font-bold">إنشاء حساب</Link>
         </p>
       </div>
     </div>

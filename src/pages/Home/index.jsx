@@ -81,7 +81,7 @@ const Home = () => {
             <Card
               text="طالب"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white  hover:text-primary "
-              className="bg-green-500 rounded-full grid place-self-center p-1 hover:p-3 "
+              className="bg-green-500 rounded-full grid place-self-center p-1 "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white  " />
               }
@@ -89,7 +89,7 @@ const Home = () => {
             <Card
               text="طالب"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className=" bg-slate-500 rounded-full grid place-self-center p-1  hover:p-3 "
+              className=" bg-slate-500 rounded-full grid place-self-center p-1 "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
@@ -97,7 +97,7 @@ const Home = () => {
             <Card
               text="طالب"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className="bg-green-500 rounded-full grid place-self-center p-1  hover:p-3"
+              className="bg-green-500 rounded-full grid place-self-center p-1 "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
@@ -105,7 +105,7 @@ const Home = () => {
             <Card
               text="طالب"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className=" bg-orange-400 rounded-full grid place-self-center p-1  hover:p-3"
+              className=" bg-orange-400 rounded-full grid place-self-center p-1 "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
@@ -113,7 +113,7 @@ const Home = () => {
             <Card
               text="طالب"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className="bg-blue-500 rounded-full grid place-self-center p-1  hover:p-3 "
+              className="bg-blue-500 rounded-full grid place-self-center p-1  "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
@@ -121,7 +121,7 @@ const Home = () => {
             <Card
               text="طالب"
               styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className=" bg-red-600 rounded-full grid place-self-center p-1  hover:p-3 "
+              className=" bg-red-600 rounded-full grid place-self-center p-1  "
               icon={
                 <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
               }
@@ -136,7 +136,7 @@ const Home = () => {
                 relevance drives out resista
               </h1>
             </div>
-            <div className="flex text-left justify-end py-3 ">
+            <div className="flex text-left justify-end py-3 gap-3">
               <Card
                 description="Public Specking"
                 styles=" w-48 flex  gap-3 max-[700px]:w-32  items-center justify-end text-left py-1 rounded-2xl bg-white "
