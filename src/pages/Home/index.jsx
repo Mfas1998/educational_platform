@@ -79,7 +79,8 @@ const Home = () => {
       </div>
 
       <div className=" bg-bgColor">
-        <div className="grid grid-cols-1  justify-end text-left py-10 bg-gray-50">
+        <div className="  py-10 bg-gray-50">
+          <div className=" grid grid-cols-1 place-items-center">
           <div className="flex items-center justify-center font-bold text-3xl">
             <h1 className=" text-primary ml-1">Top Categories</h1>
             <h1>Explore</h1>
@@ -87,7 +88,7 @@ const Home = () => {
           <p className=" text-gray-300 py-3">
             Click on the categories and explore all courses
           </p>
-          
+          </div>
             <div
             ref1={ref1}
             className=" flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0 "
