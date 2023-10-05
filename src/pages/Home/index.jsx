@@ -4,7 +4,7 @@ import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
 // import { Reveal } from "../../components/utils/Reveal";
 import React, { useRef } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Home = () => {
@@ -86,14 +86,13 @@ const Home = () => {
             Click on the categories and explore all courses
           </p>
           
-          
             <div
             ref={ref}
             className=" flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0 "
           >
             {x.map((e) => {
               return (
-                // <Link to="/studentCourses">
+                <Link to="/studentCourses">
                 <Card
                   key={e}
                   text="StudentCourses"
@@ -103,7 +102,7 @@ const Home = () => {
                     <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
                   }
                 />
-              // </Link>
+               </Link>
               );
             })}
           </div>
