@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import React from "react";
 import { AiFillPlayCircle } from "react-icons/ai"; 
 import { Link } from "react-router-dom";
-function Card(props) {
+export function Card(props) {
   return (
     <motion.div
         style={{
@@ -31,13 +31,15 @@ function Card(props) {
 
 export function CourseCard(props) {
   return (
-    <Link to='course'>
+    
     <div
-      className="rounded-2xl h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
+      className={props.itemsStyle.styleCourseCard}
     >
-      <div>
-        <img src={props.data.img} alt="" className="h-[100px] w-full rounded-t-2xl" />
+      <Link to='course'>
+      <div className=" ">
+        <img src={props.data.img} alt="" className={props.itemsStyle.styleImage} />
       </div>
+      </Link>
       <div className="p-3 h-[155px] ">
         <div className="flex items-center justify-between text-[10px]">
           <Rate allowHalf defaultValue={props.data.rate} className="text-[10px]" />
@@ -54,20 +56,22 @@ export function CourseCard(props) {
         <div className="flex items-center justify-between mt-2 h-max text-[10px] ">
             <p className="bg-primary rounded-full px-4 text-textColorprimary">Design</p>
 
+              <Link to="/teachersPage">
           <div className="flex items-center gap-2 ">
            <div>
               <p className="font-bold">{props.data.teacher}</p>
               <p>{props.data.field}</p>
            </div>
-            <img src={props.data.teacherImage} alt="" className="h-8 w-8 rounded-full"/>
+            <img src={props.data.teacherImage} alt="" className={props.itemsStyle.styleProfileImage}/>
           </div>
+              </Link>
         </div>
         <div className="flex items-center justify-evenly">
             <p className="line-through">{props.data.oldPrice}</p>
             <p>{props.data.price}</p>
           </div>
       </div>
-    </div></Link>
+    </div>
   );
 }
-export default Card;
+

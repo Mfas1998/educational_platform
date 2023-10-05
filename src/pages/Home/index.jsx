@@ -1,24 +1,30 @@
-import Card, { CourseCard } from "../../components/Card/card";
+import { Card, CourseCard } from "../../components/Card/card";
 import logo from "../../assets/images/lerning.jpg";
 import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
 // import { Reveal } from "../../components/utils/Reveal";
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 const Home = () => {
-  const  data={
-    img:logo,
-    rate:3,
-    lessonsNumber:25,
-    title:' Powerful mental tools to help you master tough subject',
-    teacher:'Mohammed Fuad',
-    field:'Web Developer',
-    oldPrice:'150$',
-    price:'100$',
-    teacherImage:logo,
+  const itemsStyle = {
+    styleImage: "h-[100px] w-full rounded-t-2xl ",
+    styleCourseCard:
+      "rounded-2xl  h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 ",
+    styleProfileImage: "h-8 w-8 rounded-full",
+  };
+  const data = {
+    img: logo,
+    rate: 3,
+    lessonsNumber: 25,
+    title: " Powerful mental tools to help you master tough subject",
+    teacher: "Mohammed Fuad",
+    field: "Web Developer",
+    oldPrice: "150$",
+    price: "100$",
+    teacherImage: logo,
+  };
 
-  }
   const ref = useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
@@ -26,7 +32,7 @@ const Home = () => {
 
   let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
-    <div className="bg-slate-50">
+    <div className=" bg-gray-50">
       <div className="p-8 ">
         <div className="flex items-center justify-between font-bold text-left   ">
           <p>Explore Courses</p>
@@ -54,7 +60,7 @@ const Home = () => {
             className="flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0  "
           >
             {x.map((e) => {
-              return <CourseCard key={e} data={data} />;
+              return <CourseCard key={e} data={data} itemsStyle={itemsStyle} />;
             })}
           </div>
           <ButtonComponent
@@ -69,8 +75,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
-        <div className=" flex flex-col items-center justify-center py-11">
+      <div className=" bg-bgColor">
+        <div className="grid grid-cols-1 items-center place-items-center py-10">
           <div className="flex items-center justify-center font-bold text-3xl">
             <h1 className=" text-primary ml-1">Top Categories</h1>
             <h1>Explore</h1>
@@ -78,57 +84,49 @@ const Home = () => {
           <p className=" text-gray-300 py-3">
             Click on the categories and explore all courses
           </p>
-          <div className="my-7 flex gap-6 ">
-            <Card
-              text="طالب"
-              styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white  hover:text-primary "
-              className="bg-green-500 rounded-full grid place-self-center p-1 "
-              icon={
-                <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white  " />
-              }
-            />
-            <Card
-              text="طالب"
-              styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className=" bg-slate-500 rounded-full grid place-self-center p-1 "
-              icon={
-                <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
-              }
-            />{" "}
-            <Card
-              text="طالب"
-              styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className="bg-green-500 rounded-full grid place-self-center p-1 "
-              icon={
-                <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
-              }
-            />{" "}
-            <Card
-              text="طالب"
-              styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className=" bg-orange-400 rounded-full grid place-self-center p-1 "
-              icon={
-                <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
-              }
-            />{" "}
-            <Card
-              text="طالب"
-              styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className="bg-blue-500 rounded-full grid place-self-center p-1  "
-              icon={
-                <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
-              }
-            />{" "}
-            <Link to="/studentCourses">
-            <Card
-              text="StudentCourses"
-              styles=" w-44 flex flex-col gap-3 max-[700px]:w-32  items-center justify-center py-8  border rounded-2xl bg-white "
-              className=" bg-red-600 rounded-full grid place-self-center p-1  "
-              icon={
-                <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
-              }
-            /></Link>
+          
+          
+            <div
+            ref={ref}
+            className=" flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0 "
+          >
+            {x.map((e) => {
+              return (
+                // <Link to="/studentCourses">
+                <Card
+                  key={e}
+                  text="StudentCourses"
+                  styles=" w-44 flex flex-col gap-3  items-center justify-center py-8  border rounded-2xl bg-white "
+                  className=" bg-red-600 rounded-full grid place-self-center p-1  "
+                  icon={
+                    <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
+                  }
+                />
+              // </Link>
+              );
+            })}
           </div>
+          <div className="flex items-center justify-center py-10">
+            <ButtonComponent
+              onClick={() => {
+                scroll(-340);
+              }}
+              title={
+                <AiOutlineArrowRight className=" text-xl  text-textColorprimary " />
+              }
+              className=" flex items-center justify-center max-[700px]:hidden absolute h-12 w-12 p-0 rounded-full bg-primary shadow-[0_0_7px_rgba(79,73,226,0.8)]  ml-16   z-50 "
+            />
+            <ButtonComponent
+              onClick={() => {
+                scroll(340);
+              }}
+              title={
+                <AiOutlineArrowLeft className="text-xl text-textColorprimary" />
+              }
+              className="flex items-center justify-center max-[700px]:hidden absolute h-12 w-12 p-0 rounded-full bg-primary shadow-[0_0_7px_rgba(48,39,255,0.8)] mr-16  z-50 "
+            />
+          </div>
+          
         </div>
         <div className="grid grid-cols-2 justify-center place-items-center">
           <div className=" text-left">
@@ -173,56 +171,61 @@ const Home = () => {
               className="bg-primary text-textColorprimary rounded-full m-6 "
             />
           </div>
-          <img src={logo} alt="" className="" />
+          <img src={logo} alt="" className="h-[300px] w-full px-20" />
         </div>
-        <div className="grid grid-cols-1 items-center justify-end text-left py-10">
+        <div className=" grid grid-cols-1 items-center justify-end text-left py-10 bg-gray-50">
           <div className=" flex flex-col items-center  font-bold">
             <p className="text-2xl ">Testimonials</p>
             <p className=" text-gray-300 py-5 text-lg ">
               Whte our student say about us
             </p>
           </div>
-          <div className="flex gap-10 items-center justify-center">
-            <Card
-              description="Creative Thinking"
-              styles=" w-80  py-6 px-8 max-[700px]:w-32 items-center justify-center rounded-2xl bg-white border "
-              className=" bg-slate-500 rounded-full grid place-self-center p-3  hover:p-4 "
-              icon={
-                <PiUsersLight className=" w-5 h-5 m-1   items-center justify-center " />
+
+          <div
+            ref={ref}
+            className=" flex items-center justify-start gap-8 mt-5 px-16 py-8  overflow-x-scroll scroll-w-0  "
+          >
+            {x.map((e) => {
+              return (
+                <Card
+                  key={e}
+                  description="Creative Thinking"
+                  styles=" w-80  py-6 px-8  items-center justify-center rounded-2xl bg-white border "
+                  className=" bg-slate-500 rounded-full grid place-self-center p-3  hover:p-4 "
+                  icon={
+                    <PiUsersLight className=" w-5 h-5 m-1   items-center justify-center " />
+                  }
+                  text=" You’re not connected And the web just isn’t the same without you.
+                      Let’s get you back online Check that your network cables are plugged
+                      in. Make sure you’re not in airplane mode. See if your wireless
+                      switch is turned on. Restart your router."
+                  styleText="mt-3"
+                />
+              );
+            })}
+          </div>
+
+          <div className="flex items-center justify-center py-10">
+            <ButtonComponent
+              onClick={() => {
+                scroll(-340);
+              }}
+              title={
+                <AiOutlineArrowRight className=" text-xl  text-textColorprimary " />
               }
-              text=" You’re not connected And the web just isn’t the same without you.
-                Let’s get you back online Check that your network cables are plugged
-                in. Make sure you’re not in airplane mode. See if your wireless
-                switch is turned on. Restart your router."
-              styleText="mt-3"
+              className=" flex items-center justify-center max-[700px]:hidden absolute h-12 w-12 p-0 rounded-full bg-primary shadow-[0_0_7px_rgba(79,73,226,0.8)]  ml-16   z-50 "
             />
-            <Card
-              description="Creative Thinking"
-              styles=" w-80  py-6 px-8  max-[700px]:w-32 items-center justify-center rounded-2xl bg-white border "
-              className=" bg-orange-400 rounded-full grid place-self-center p-3  hover:p-4 "
-              icon={
-                <PiUsersLight className=" w-5 h-5 m-1  items-center justify-center" />
+            <ButtonComponent
+              onClick={() => {
+                scroll(340);
+              }}
+              title={
+                <AiOutlineArrowLeft className="text-xl text-textColorprimary" />
               }
-              text=" You’re not connected And the web just isn’t the same without you.
-                Let’s get you back online Check that your network cables are plugged
-                in. Make sure you’re not in airplane mode. See if your wireless
-                switch is turned on. Restart your router."
-              styleText="mt-3"
-            />
-            <Card
-              description="Creative Thinking"
-              styles=" w-80  py-6 px-6  max-[700px]:w-32 items-center justify-center  rounded-2xl bg-white border "
-              className=" bg-rose-300 rounded-full grid place-self-center p-3  hover:p-4 "
-              icon={
-                <PiUsersLight className=" w-5 h-5 m-1items-center justify-center " />
-              }
-              text=" You’re not connected And the web just isn’t the same without you.
-                Let’s get you back online Check that your network cables are plugged
-                in. Make sure you’re not in airplane mode. See if your wireless
-                switch is turned on. Restart your router."
-              styleText="mt-3"
+              className="flex items-center justify-center max-[700px]:hidden absolute h-12 w-12 p-0 rounded-full bg-primary shadow-[0_0_7px_rgba(48,39,255,0.8)] mr-16  z-50 "
             />
           </div>
+        
         </div>
       </div>
     </div>

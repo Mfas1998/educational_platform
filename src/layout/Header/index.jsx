@@ -49,7 +49,7 @@ const Header = () => {
       <div className=" max-[700px]:hidden ">
         <ul className="flex gap-6  ">
           <li>
-            <Link to="#">الرئيسية</Link>
+            <Link to="/">الرئيسية</Link>
           </li>
           <li>
             <Link to="#">الكورسات</Link>

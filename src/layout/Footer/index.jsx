@@ -1,4 +1,4 @@
-import Card from "../../components/Card/card";
+import {Card} from "../../components/Card/card";
 import { Link } from "react-router-dom";
 import { IoMdCall } from "react-icons/io";
 import { AiOutlineMail, AiOutlineInstagram } from "react-icons/ai";
