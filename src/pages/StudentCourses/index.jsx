@@ -20,7 +20,7 @@ const StudentCourses = () => {
     field: "Web Developer",
     oldPrice: "150$",
     price: "100$",
-    teacherImage: logo,
+    teacherImage: logo, 
   };
   const ref = useRef(null);
   const ref2 = useRef(null);
@@ -88,7 +88,7 @@ const StudentCourses = () => {
             className="flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0  "
           >
             {x.map((e) => {
-              return <CourseCard key={e} data={data} />;
+              return <CourseCard key={e} data={data} itemsStyle={itemsStyle} />;
             })}
           </div>
           <div className="flex items-center justify-center">

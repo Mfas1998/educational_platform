@@ -26,9 +26,12 @@ const Home = () => {
   };
 
   const ref = useRef(null);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
+
 
   let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
@@ -76,7 +79,8 @@ const Home = () => {
       </div>
 
       <div className=" bg-bgColor">
-        <div className="grid grid-cols-1 items-center place-items-center py-10">
+        <div className="  py-10 bg-gray-50">
+          <div className=" grid grid-cols-1 place-items-center">
           <div className="flex items-center justify-center font-bold text-3xl">
             <h1 className=" text-primary ml-1">Top Categories</h1>
             <h1>Explore</h1>
@@ -84,15 +88,14 @@ const Home = () => {
           <p className=" text-gray-300 py-3">
             Click on the categories and explore all courses
           </p>
-          
-          
+          </div>
             <div
-            ref={ref}
+            ref1={ref1}
             className=" flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0 "
           >
             {x.map((e) => {
               return (
-                // <Link to="/studentCourses">
+                <Link to="/studentCourses">
                 <Card
                   key={e}
                   text="StudentCourses"
@@ -102,7 +105,7 @@ const Home = () => {
                     <PiUsersLight className=" w-8 h-8 m-2  items-center justify-center text-white " />
                   }
                 />
-              // </Link>
+               </Link>
               );
             })}
           </div>
@@ -182,7 +185,7 @@ const Home = () => {
           </div>
 
           <div
-            ref={ref}
+            ref2={ref2}
             className=" flex items-center justify-start gap-8 mt-5 px-16 py-8  overflow-x-scroll scroll-w-0  "
           >
             {x.map((e) => {
