@@ -4,7 +4,6 @@ import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
 // import { Reveal } from "../../components/utils/Reveal";
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Home = () => {
