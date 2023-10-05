@@ -1,10 +1,9 @@
-import Card, { CourseCard } from "../../components/Card/card";
 import logo from "../../assets/images/lerning.jpg";
+import { CourseCard } from "../../components/Card/card";
 //import { PiUsersLight } from "react-icons/pi";
-import ButtonComponent from "../../components/Button";
-import { Reveal } from "../../components/utils/Reveal";
 import React, { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import ButtonComponent from "../../components/Button";
 const StudentCourses = () => {
   const data = {
     img: logo,

@@ -13,8 +13,11 @@
   }
   
 }
+html{
+  scroll-behavior:smooth ;
+}
 .active-video{
-  background-color:#2980b9 !important ;
+  background-color:#0e72d6 ;
     }
     .active-video h3{
   color: #fff;

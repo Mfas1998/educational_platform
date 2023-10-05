@@ -30,7 +30,7 @@ function Card(props) {
 
 export function CourseCard(props) {
   return (
-    <Link to='course'>
+    <Link to='../course'>
     <div
       className="rounded-2xl h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 "
     >
