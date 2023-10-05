@@ -8,6 +8,7 @@ import SendEmail from '../pages/CheckEmail'
 import SetNewPassword from '../pages/SetNewPassword'
 import PasswordReset from '../pages/ResetPasswordDone'
 import StudentCourses from '../pages/StudentCourses'
+import TeachersPage from '../pages/TeachersPage'
 
 const Routers = () => {
   return (
@@ -22,6 +23,7 @@ const Routers = () => {
         <Route path='setNewPassword' element={<SetNewPassword/>} />
         <Route path='passwordReset' element={<PasswordReset/>} />
         <Route path='studentCourses' element={<StudentCourses/>} />
+        <Route path='teachersPage' element={<TeachersPage/>} />
       </Routes>
     </>
   )

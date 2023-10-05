@@ -8,6 +8,7 @@ module.exports = {
         //'textColor':'#8988A3',
         'textColor':'#DFD4F6',
         'textColorprimary':'#FFFFFF',
+        'bgColor':'#FCFBFF'
       }
     },
   },

@@ -5,6 +5,12 @@ import React, { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import ButtonComponent from "../../components/Button";
 const StudentCourses = () => {
+  const itemsStyle = {
+    styleImage: "h-[100px] w-full rounded-t-2xl ",
+    styleCourseCard:
+      "rounded-2xl  h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 ",
+    styleProfileImage: "h-8 w-8 rounded-full",
+  };
   const data = {
     img: logo,
     rate: 3,
@@ -41,16 +47,16 @@ const StudentCourses = () => {
         <div className="relative  items-center justify-center rounded-2xl border bg-violet-200 ">
           <div
             ref={ref}
-            className="flex items-center justify-start gap-8  px-16 py-8 overflow-x-scroll scroll-w-0  "
+            className="flex items-center justify-start gap-8  px-16 py-8 overflow-x-scroll scroll-w-1  "
           >
             {x.map((e) => {
-              return <CourseCard key={e} data={data} />;
+              return <CourseCard key={e} data={data} itemsStyle={itemsStyle} />;
             })}
           </div>
           <div className="flex items-center justify-center">
             <ButtonComponent
               onClick={() => {
-                scroll(-300);
+                scroll(-340);
               }}
               title={
                 <AiOutlineArrowRight className="text-5xl text-textColorprimary" />
@@ -59,7 +65,7 @@ const StudentCourses = () => {
             />
             <ButtonComponent
               onClick={() => {
-                scroll(300);
+                scroll(340);
               }}
               title={
                 <AiOutlineArrowLeft className="text-5xl text-textColorprimary" />
