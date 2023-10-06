@@ -28,7 +28,7 @@ const Home = () => {
   const ref = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
-  const scroll = (scrollOffset) => {
+  const scroll=(scrollOffset,ref)=>{
     ref.current.scrollLeft += scrollOffset;
   };
 
@@ -50,7 +50,7 @@ const Home = () => {
         <div className="relative flex items-center">
           <ButtonComponent
             onClick={() => {
-              scroll(-300);
+              scroll(-300,ref);
             }}
             title={
               <AiOutlineArrowRight className="text-5xl text-textColorprimary" />
@@ -68,7 +68,7 @@ const Home = () => {
           </div>
           <ButtonComponent
             onClick={() => {
-              scroll(300);
+              scroll(300,ref);
             }}
             title={
               <AiOutlineArrowLeft className="text-5xl text-textColorprimary" />
@@ -90,7 +90,7 @@ const Home = () => {
           </p>
           </div>
             <div
-            ref1={ref1}
+            ref={ref1}
             className=" flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0 "
           >
             {x.map((e) => {
@@ -112,7 +112,7 @@ const Home = () => {
           <div className="flex items-center justify-center py-10">
             <ButtonComponent
               onClick={() => {
-                scroll(-340);
+                scroll(-340,ref1);
               }}
               title={
                 <AiOutlineArrowRight className=" text-xl  text-textColorprimary " />
@@ -121,7 +121,7 @@ const Home = () => {
             />
             <ButtonComponent
               onClick={() => {
-                scroll(340);
+                scroll(340,ref1);
               }}
               title={
                 <AiOutlineArrowLeft className="text-xl text-textColorprimary" />
@@ -185,7 +185,7 @@ const Home = () => {
           </div>
 
           <div
-            ref2={ref2}
+            ref={ref2}
             className=" flex items-center justify-start gap-8 mt-5 px-16 py-8  overflow-x-scroll scroll-w-0  "
           >
             {x.map((e) => {
@@ -211,7 +211,7 @@ const Home = () => {
           <div className="flex items-center justify-center py-10">
             <ButtonComponent
               onClick={() => {
-                scroll(-340);
+                scroll(-340,ref2);
               }}
               title={
                 <AiOutlineArrowRight className=" text-xl  text-textColorprimary " />
@@ -220,7 +220,7 @@ const Home = () => {
             />
             <ButtonComponent
               onClick={() => {
-                scroll(340);
+                scroll(340,ref2);
               }}
               title={
                 <AiOutlineArrowLeft className="text-xl text-textColorprimary" />
