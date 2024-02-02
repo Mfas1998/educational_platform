@@ -1,18 +1,9 @@
 import { Rate } from "antd";
-import { motion } from "framer-motion";
-import { AiFillPlayCircle } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import  {AiFillPlayCircle}  from "react-icons/ai";
+import  {Link}  from "react-router-dom";
 export function Card(props) {
   return (
-    <motion.div
-      style={{
-        borderRadius: "20px",
-        boxShadow: "0 0 7px rgba(0,0,0,0.2)",
-      }}
-      whileHover={{
-        scale: 1.1,
-      }}
-    >
+    <div className=" rounded-[20px] shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 ">
       <div className={props.styles}>
         <div className=" flex text-left items-center justify-end gap-3 ">
           <div className="grid grid-cols-1   ">
@@ -24,19 +15,20 @@ export function Card(props) {
 
         <p className={props.styleText}>{props.text}</p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export function CourseCard(props) {
   return (
-    <div className={props.itemsStyle.styleCourseCard}>
+    <div className= "rounded-2xl  h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 ">
       <Link to="../course">
         <div className=" ">
           <img
             src={props.data.img}
             alt=""
-            className={props.itemsStyle.styleImage}
+            className="h-[100px] w-full  rounded-t-2xl "
+            loading="lazy"
           />
         </div>
       </Link>
@@ -69,7 +61,8 @@ export function CourseCard(props) {
               <img
                 src={props.data.teacherImage}
                 alt=""
-                className={props.itemsStyle.styleProfileImage}
+                className="h-8 w-8 rounded-full"
+                loading="lazy"
               />
             </div>
           </Link>

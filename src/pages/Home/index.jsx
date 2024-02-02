@@ -3,16 +3,11 @@ import logo from "../../assets/images/lerning.jpg";
 import { PiUsersLight } from "react-icons/pi";
 import ButtonComponent from "../../components/Button";
 // import { Reveal } from "../../components/utils/Reveal";
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Home = () => {
-  const itemsStyle = {
-    styleImage: "h-[100px] w-full rounded-t-2xl ",
-    styleCourseCard:
-      "rounded-2xl  h-[255px] min-w-[260px] bg-white shadow-[0_0_7px_rgba(0,0,0,0.2)] hover:scale-110 ",
-    styleProfileImage: "h-8 w-8 rounded-full",
-  };
+  
   const data = {
     img: logo,
     rate: 3,
@@ -60,10 +55,10 @@ const Home = () => {
 
           <div
             ref={ref}
-            className="flex items-center justify-start gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0  "
+            className="flex items-center justify-center gap-8 mt-5 px-16 py-8 overflow-x-scroll scroll-w-0  "
           >
             {x.map((e) => {
-              return <CourseCard key={e} data={data} itemsStyle={itemsStyle} />;
+              return <CourseCard key={e} data={data}  />;
             })}
           </div>
           <ButtonComponent
@@ -95,9 +90,8 @@ const Home = () => {
           >
             {x.map((e) => {
               return (
-                <Link to="/studentCourses">
+                <Link to="/studentCourses"  key={e}>
                 <Card
-                  key={e}
                   text="StudentCourses"
                   styles=" w-44 flex flex-col gap-3  items-center justify-center py-8  border rounded-2xl bg-white "
                   className=" bg-red-600 rounded-full grid place-self-center p-1  "

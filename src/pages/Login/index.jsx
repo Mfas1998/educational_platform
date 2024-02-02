@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <div className="flex justify-center text-ellipsis">
       <div className="p-2 shadow-[0_0_7px_rgba(0,0,0,0.2)] rounded-lg">
-        <p className="text-xl text-center py-8">مرحبا بكم في مجتمع كود سكويد</p>
+        <p className="text-xl text-center py-8">مرحبا بكم في مـنـصـة مُـتمـيز </p>
         <Form> 
           <div>
             <Form.Item name="email">
@@ -35,7 +35,7 @@ const Login = () => {
                 </Form.Item>
                 <p>تذكرني</p>
               </div>
-              <Link to='/ForgotPassword' className=" text-textColor font-bold hover:text-primary">Forgot password</Link>
+              <Link to='/ForgotPassword' className=" text-textColor font-bold hover:text-primary">نسيت كلمة المرور؟</Link>
             </div>
             <ButtonComponent
                 htmlType="submit"

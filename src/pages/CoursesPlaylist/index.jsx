@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import {useRef } from "react";
 import video2 from "../../assets/images/2.mp4";
 import video3 from "../../assets/images/3.mp4";
 import video4 from "../../assets/images/4.mp4";
