@@ -36,7 +36,7 @@ const Header = () => {
         />
       </div>
       <div className="flex gap-4 items-center">
-        <img src={logo} alt="" width={50} height={50} />
+       <Link to="studentProfile"> <img src={logo} alt="" width={50} height={50} /></Link>
         <h3>مكاوش</h3>
       </div>
       <div className="hidden max-[700px]:block">

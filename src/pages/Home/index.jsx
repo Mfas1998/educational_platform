@@ -11,7 +11,7 @@ const Home = () => {
   const data = {
     img: logo,
     rate: 3,
-    lessonsNumber: 25,
+    lessonsNumber: 25, 
     title: " Powerful mental tools to help you master tough subject",
     teacher: "Mohammed Fuad",
     field: "Web Developer",
@@ -19,7 +19,7 @@ const Home = () => {
     price: "100$",
     teacherImage: logo,
   };
-
+  
   const ref = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -102,6 +102,7 @@ const Home = () => {
                </Link>
               );
             })}
+           
           </div>
           <div className="flex items-center justify-center py-10">
             <ButtonComponent

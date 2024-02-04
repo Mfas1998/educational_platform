@@ -50,7 +50,7 @@ export function CourseCard(props) {
         <div className="flex items-center justify-between mt-2 h-max text-[10px] ">
           <p className="bg-primary rounded-full px-4 text-textColorprimary">
             Design
-          </p>
+          </p> 
 
           <Link to="/teachersPage">
             <div className="flex items-center gap-2 ">
