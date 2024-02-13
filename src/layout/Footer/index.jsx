@@ -151,12 +151,51 @@ const Footer = () => {
     //     </div>
     //   </div>
     // </div>
-
+    <>
+    <div className="flex items-center justify-center gap-5 pb-48 w-full mt-8">
+    <Card
+      styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
+      description="محاضر"
+      counter="2000"
+      className="bg-orange-500 rounded-full grid place-self-center p-1 "
+      icon={
+        <PiGraduationCapThin className=" w-8 h-8 items-center justify-center  text-white" />
+      }
+    />
+    <Card
+      styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
+      description="طالب"
+      counter="300"
+      className="bg-green-500 rounded-full grid place-self-center p-1 "
+      icon={
+        <PiUsersLight className=" w-8 h-8 items-center justify-center text-white " />
+      }
+    />
+    <Card
+      styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
+      description="فيديو"
+      counter="400"
+      className="bg-sky-600 rounded-full grid place-self-center p-1"
+      icon={
+        <PiVideoCameraLight className=" w-8 h-8 items-center justify-center text-white" />
+      }
+    />
+    <Card
+      styles=" w-44 flex max-[700px]:w-28  max-[700px]:pr-2 items-center justify-center pr-14 py-2 border rounded-2xl bg-white "
+      description="مستخدم"
+      counter="500"
+      className="bg-primary rounded-full grid place-self-center p-1"
+      icon={
+        <PiUsersThreeThin className=" w-8 h-8 items-center justify-center text-white" />
+      }
+    />
+  </div>
     
-      <footer className="bg-primary w-full  px-20 pt-16 pb-4 text-gray-300 shadow-[0_0_7px_rgba(0,0,0,0.2)]">
+      <footer className="bg-primary w-full  px-20 pt-16 pb-4 text-gray-300 shadow-[0_0_7px_rgba(0,0,0,0.2)] -mt-56">
         
-       
-         <div className="grid gap-4 grid-auto-fit-sm">
+        {/* <div className="w-full mt-8"> */}
+      
+         <div className="grid gap-4 grid-auto-fit-sm ">
             {/* start logo and description section */}
             <section className=" grid gap-3 place-items-center text-center">
               <img
@@ -222,7 +261,7 @@ const Footer = () => {
       </footer>
 
      
-
+      </>               
      
   );
 };
